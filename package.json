@@ -1,0 +1,32 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "Web app that let's users comment on the latest news from New York Times website",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krenaldi/news-scraper.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Mongoose",
+    "AXIOS",
+    "Cheerio"
+  ],
+  "author": "Kris Renaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krenaldi/news-scraper/issues"
+  },
+  "homepage": "https://github.com/krenaldi/news-scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.3",
+    "morgan": "^1.9.1"
+  }
+}
