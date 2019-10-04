@@ -4,7 +4,9 @@
   "description": "Web app that let's users comment on the latest news from New York Times website",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
