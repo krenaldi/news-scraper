@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 
 // Saved reference to the Schema constructor
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new ArticleSchema object
-var ArticleSchema = new Schema({
+let ArticleSchema = new Schema({
     title: {
         type: String,
         required: true
