@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
 * {
     font-size: 16pt
 }
 
 body { 
-  background-color: #F2F6D0;
-  font-family: 'Times New Roman', Times, serif 
+  background-color:lightgrey;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  font-family: 'Monoton', cursive;
+  color: red;
+  text-align: center;
 }
 #wrapper {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5%;
+  width: 85%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #fff;
 }
 #articles {
   display: inline-block;
@@ -25,13 +33,10 @@ body {
 textarea, input {
   display: block;
   width: 100%;
-  background-color: #FCF5C7;
 }
 input {
   height: 36px;
-  font-size: 24px;
 }
 textarea {
   height: 200px;
-  font-size: 18px;
 }

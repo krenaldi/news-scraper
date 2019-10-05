@@ -3,27 +3,27 @@ $.getJSON('/articles', data => {
     // For each article
     for (let i = 0; i < data.length; i++) {
         // Display the articles on the page
-        $('#articles').append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].intro + "<br />" + data[i].link + "</p>");
+        $('#articles').append("<p data-id='" + data[i]._id + "'><a href='" + data[i].link + "'>" + data[i].title + "</a><br />" + data[i].intro + "</p>");
     }
 });
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", () => {
+$(document).on("click", "p", function() {
     // Empty the notes from the note section
     $("#notes").empty();
     // Save the id from the p tag
-    let thisId = $(this).attr("data-id");
-
+    var thisId = $(this).attr("data-id");
+    console.log(thisId);
     // Now make an ajax call for the Article
     $.ajax({
         method: "GET",
         url: "/articles/" + thisId
     })
         // With that done, add the note information to the page
-        .then(data => {
+        .then(function (data) {
             console.log(data);
             // The title of the article
-            $("#notes").append("<h2>" + data.title + "</h2>");
+            $("#notes").append("<strong>" + data.title + "</strong>");
             // An input to enter a new title
             $("#notes").append("<input id='titleinput' name='title' >");
             // A textarea to add a new note body
@@ -44,7 +44,7 @@ $(document).on("click", "p", () => {
 // When you click the savenote button
 $(document).on("click", "#savenote", () => {
     // Grab the id associated with the article from the submit button
-    let thisId = $(this).attr("data-id");
+    var thisId = $(this).attr("data-id");
 
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
