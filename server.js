@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost/newsscraper", { useNewUrlParser: true });
 
 // Routes
 
-// A GET route for scraping the echoJS website
+// A GET route for scraping the Rolling Stones website
 app.get("/scrape", function (req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://www.rollingstone.com/politics/").then(function (response) {
