@@ -1,5 +1,5 @@
 // Grab the articles as a json
-$.getJSON('/articles', data => {
+$.getJSON('/articles', function (data) {
     // For each article
     for (let i = 0; i < data.length; i++) {
         // Display the articles on the page
